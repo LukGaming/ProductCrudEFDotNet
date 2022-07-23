@@ -10087,11 +10087,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LukGaming\\Desktop\\ProductCrud\\ProductCrud\\ProductCrud.csproj",
+      "projectUniqueName": "C:\\Users\\LukGaming\\Desktop\\Nova pasta\\ProductCrud\\ProductCrud\\ProductCrud.csproj",
       "projectName": "ProductCrud",
-      "projectPath": "C:\\Users\\LukGaming\\Desktop\\ProductCrud\\ProductCrud\\ProductCrud.csproj",
+      "projectPath": "C:\\Users\\LukGaming\\Desktop\\Nova pasta\\ProductCrud\\ProductCrud\\ProductCrud.csproj",
       "packagesPath": "C:\\Users\\LukGaming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LukGaming\\Desktop\\ProductCrud\\ProductCrud\\obj\\",
+      "outputPath": "C:\\Users\\LukGaming\\Desktop\\Nova pasta\\ProductCrud\\ProductCrud\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LukGaming\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProductCrud.Dtos;
+using ProductCrud.Models;
 
 namespace ProductCrud.Controllers
 {
@@ -15,7 +17,7 @@ namespace ProductCrud.Controllers
         [HttpGet]
         public async Task<ActionResult<IList<Product>>> Get()
         {
-            return await _context.Products.ToListAsync();
+           return await _context.Products.Include(i => i.Category).Include(i => i.Images).ToListAsync();
         }
         [HttpPost]
         public async Task<ActionResult<Product>> Post(CreateProductDto request)
@@ -44,8 +46,8 @@ namespace ProductCrud.Controllers
         public async Task<ActionResult<Product>> Put(int id, CreateProductDto request)
         {
             
-            var product = await _context.Products.FindAsync(id);
-            var category = await _context.Categories.FindAsync(request.CategoryId);
+            Product product = await _context.Products.FindAsync(id);
+            Category category = await _context.Categories.FindAsync(request.CategoryId);
             product.Name = request.Name;
             product.Description = request.Description;
             product.Value = request.Value;

@@ -1,4 +1,4 @@
-﻿namespace ProductCrud
+﻿namespace ProductCrud.Dtos
 {
     public class CreateCategoryDto
     {

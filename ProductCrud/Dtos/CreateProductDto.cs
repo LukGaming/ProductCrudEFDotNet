@@ -1,8 +1,8 @@
-﻿namespace ProductCrud
+﻿namespace ProductCrud.Dtos
 {
     public class CreateProductDto
     {
-        public int ?Id { get; set; }
+        public int? Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public double Value { get; set; } = 0;

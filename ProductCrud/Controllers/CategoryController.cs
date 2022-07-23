@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using ProductCrud.Dtos;
+using ProductCrud.Models;
 
 namespace ProductCrud.Controllers
 {
