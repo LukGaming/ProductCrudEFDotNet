@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductCrud.Dtos;
 using ProductCrud.Models;
@@ -14,10 +15,18 @@ namespace ProductCrud.Controllers
         {
             _context = context;
         }
+
         [HttpGet]
+
         public async Task<ActionResult<IList<Product>>> Get()
         {
-           return await _context.Products.Include(i => i.Category).Include(i => i.Images).ToListAsync();
+            return await _context.Products.Include(i => i.Category).Include(i => i.Images).ToListAsync();
+        }
+        [HttpGet]
+        [Route("get-by-id")]
+        public async Task<ActionResult<Product>> getById(int id)
+        {
+            return await _context.Products.Include(i => i.Category).Include(i => i.Images).FirstOrDefaultAsync(x => x.Id == id);
         }
         [HttpPost]
         public async Task<ActionResult<Product>> Post(CreateProductDto request)
@@ -37,7 +46,6 @@ namespace ProductCrud.Controllers
         [HttpDelete]
         public async Task<ActionResult<IList<Product>>> Delete(int id)
         {
-
             _context.Remove(_context.Products.Single(a => a.Id == id));
             _context.SaveChanges();
             return await _context.Products.ToListAsync();
@@ -45,7 +53,7 @@ namespace ProductCrud.Controllers
         [HttpPut]
         public async Task<ActionResult<Product>> Put(int id, CreateProductDto request)
         {
-            
+
             Product product = await _context.Products.FindAsync(id);
             Category category = await _context.Categories.FindAsync(request.CategoryId);
             product.Name = request.Name;

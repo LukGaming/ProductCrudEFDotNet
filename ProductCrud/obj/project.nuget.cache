@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o5ldbEWiSJjPcfBbZbk6wrYP4zCWelgsASzuR7u15aQXQRnWClhuA5VpHQKHosx7TLc4aaD+6pWk3wKkEfrJng==",
+  "dgSpecHash": "VIeUWWOJTF7kPVRe6jGH79fNTcBCBhXeZs2wSSV7ZH9dTafHt6M23qErLefoYM/l8ogXgz3IHR3Wz2oPjjXp7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LukGaming\\Desktop\\Nova pasta\\ProductCrud\\ProductCrud\\ProductCrud.csproj",
+  "projectFilePath": "C:\\Users\\LukGaming\\Desktop\\Product-crud-vue-api\\ProductCrudEFDotNet\\ProductCrud\\ProductCrud.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LukGaming\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\LukGaming\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

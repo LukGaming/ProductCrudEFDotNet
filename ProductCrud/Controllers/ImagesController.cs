@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductCrud.Models;
 using System;
@@ -75,6 +76,14 @@ namespace ProductCrud.Controllers
                 return Ok("Não foi possível remover essa imagem");
             }
 
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetFile(string image_name)
+        {
+            var path = "Images";
+            var temporaryImage = System.IO.File.OpenRead(path + "/" + image_name);
+            //Replace "image/jpeg" with the mimetype of your image.
+            return File(temporaryImage, "image/jpg");
         }
     }
 }
